@@ -2,13 +2,13 @@
 
 /**
  * add_rvar_node - adds a variable at the end
- * @head: head of linked list
- * @lvar: lengthh of the variable
- * @val:value of the variable
- * @lval: length of the value
- * Return: address of the head
+ * of a r_var list.
+ * @head: head of the linked list.
+ * @lvar: length of the variable.
+ * @val: value of the variable.
+ * @lval: length of the value.
+ * Return: address of the head.
  */
-
 r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 {
 	r_var *new, *temp;
@@ -40,8 +40,8 @@ r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 
 /**
  * free_rvar_list - frees a r_var list
- * @head: head of the linked list
- * Return: no return
+ * @head: head of the linked list.
+ * Return: no return.
  */
 void free_rvar_list(r_var **head)
 {
@@ -50,12 +50,12 @@ void free_rvar_list(r_var **head)
 
 	if (head != NULL)
 	{
-	curr = *head;
-	while ((temp = curr) != NULL)
-	{
-	curr = curr->next;
-	free(temp);
-	}
-	*head = NULL;
+		curr = *head;
+		while ((temp = curr) != NULL)
+		{
+			curr = curr->next;
+			free(temp);
+		}
+		*head = NULL;
 	}
 }
